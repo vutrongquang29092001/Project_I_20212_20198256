@@ -22,7 +22,7 @@ public class Bai_2 {
                 }
             }
             if (count < 1 & index < 20) {
-             //   System.out.println("số nguyên tố thứ " + index + ": " + i);
+                //   System.out.println("số nguyên tố thứ " + index + ": " + i);
                 list[index] = i;
                 index++;
             }
@@ -32,16 +32,19 @@ public class Bai_2 {
     }
 
     public void print(int[] a) {
-       for(int i = 0; i < a.length; i++){
-           System.out.println("số nguyên tố thứ " + i + ": " + a[i]);
-       }
+        for (int i = 0; i < a.length; i++) {
+            System.out.println("số nguyên tố thứ " + i + ": " + a[i]);
+        }
     }
 
     public boolean check(double n) {
-        for (int i = 2; i < Math.sqrt(n); i++) {
+        if(n == 1) return false;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
             if (n % i == 0) {
-                return false;
+
+             return false;
             }
+
         }
         return true;
     }

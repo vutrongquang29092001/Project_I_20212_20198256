@@ -14,9 +14,9 @@ import java.util.Map;
  */
 public class Bai_5 {
     // In ra màn hình các số nằm giữa 1000 và 2000 đồng thời chia hết cho 3,5,7
-public void bai_5(){
+public Map bai_5(){
       int listNumber[] = new int[2000];
-     Map<Integer,Integer> map = new HashMap<>();
+     Map<Integer,Integer> map = new HashMap<Integer,Integer>();
        
         for (int i = (1000/(3*5*7)), j = 1; i < (2000/(3*5*7)); i++) {
            
@@ -27,5 +27,6 @@ public void bai_5(){
 
         }
         System.out.println(map);
+        return map;
 }
 }

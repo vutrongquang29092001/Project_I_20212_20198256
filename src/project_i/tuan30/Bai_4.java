@@ -17,6 +17,5 @@ public class Bai_4 {
         if(n == 1) return 1;
         if(n == 2) return 2;
         return fibonaxi(n-1)+fibonaxi(n-2);
-
     }
 }

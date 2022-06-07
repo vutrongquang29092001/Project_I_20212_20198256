@@ -13,21 +13,23 @@ import java.math.BigInteger;
  */
 public class Bai_6 {
 
-    public void bai_6() {
+    public long[] bai_6() {
         //In ra màn hình 5 số hoàn hảo đầu tiên (Số hoàn hảo là số có tổng bằng các ước số của mình kể cả 1
-
+        long[] arr = new long[5];
         Bai_2 b2 = new Bai_2();
         int index = 1;
         for (int i = 0; i < 6; i++) {
            int b[] = b2.bai_2();
             if (b2.check(Math.pow(2, b2.bai_2()[i]) - 1)) {
                 long a = (long) (Math.pow(2, b[i] - 1) * (Math.pow(2, b[i]) - 1));
+                arr[index-1] = a;
                 System.out.println("số hoàn hảo thứ " + index + ": " + a);
                 index ++;
                 System.out.println("test :" + check(a));
             }
 
         }
+        return arr;
     }
 
     public boolean check(long n) {
