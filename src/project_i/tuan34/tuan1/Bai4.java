@@ -26,11 +26,13 @@ public class Bai4 extends javax.swing.JPanel {
 
     public Bai4() {
         initComponents();
-        setUp();;
+        setUp();
         jButton1.addActionListener((e) -> {
             jPanel5.removeAll();
             jPanel6.removeAll();
             handle();
+            jPanel5.updateUI();
+            jPanel6.updateUI();
             jPanel5.updateUI();
             jPanel6.updateUI();
         });
@@ -43,6 +45,8 @@ public class Bai4 extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment((int) CENTER_ALIGNMENT);
         jLabel2.setText("số chia hết cho 7");
         jLabel2.setHorizontalAlignment((int) CENTER_ALIGNMENT);
+        jPanel5.removeAll();
+        jPanel6.removeAll();
 
     }
 
@@ -153,6 +157,7 @@ public class Bai4 extends javax.swing.JPanel {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("jLabel1");

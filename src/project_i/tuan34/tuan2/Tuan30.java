@@ -5,7 +5,6 @@
  */
 package project_i.tuan34.tuan2;
 
-
 import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.BorderFactory;
@@ -23,8 +22,14 @@ public class Tuan30 extends javax.swing.JPanel {
     /**
      * Creates new form Tuan29
      */
-   
     Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+    Bai1 bai1 = new Bai1();
+
+    Bai2 bai2 = new Bai2();
+
+    Bai3 bai3 = new Bai3();
+
+    Bai4 bai4 = new Bai4();
 
     public Tuan30() {
         initComponents();
@@ -34,50 +39,52 @@ public class Tuan30 extends javax.swing.JPanel {
     public void getEx() {
         jPanel3.setLayout(new CardLayout());
         CardLayout cardLayout = (CardLayout) jPanel3.getLayout();
-        jPanel3.add(new Bai1(), "bai1");
-        jPanel3.add(new Bai2(), "bai2");
-        jPanel3.add(new Bai3(), "bai3");
-        jPanel3.add(new Bai4(), "bai4");
+        jPanel3.add(bai1, "bai1");
+        jPanel3.add(bai2, "bai2");
+        jPanel3.add(bai3, "bai3");
+        jPanel3.add(bai4, "bai4");
       
         setDeBai("bai1");
         jBBai1.addActionListener((e) -> {
+            bai1.setUp();
             cardLayout.show(jPanel3, "bai1");
             setDeBai("bai1");
             
         });
         jBBai2.addActionListener((e) -> {
+            bai2.setUp();
             cardLayout.show(jPanel3, "bai2");
              setDeBai("bai2");
         });
          jBBai3.addActionListener((e) -> {
+            bai3.setUp();
             cardLayout.show(jPanel3, "bai3");
              setDeBai("bai3");
         });
           jBBai4.addActionListener((e) -> {
+            bai4.setUp();
             cardLayout.show(jPanel3, "bai4");
               setDeBai("bai4");
         });
         
-
     }
-    public void setDeBai(String str){
+
+    public void setDeBai(String str) {
           jLDeBai.setBorder(border);
-        if(str.equals("bai1")){
-            jLDeBai.setText("Bài 1: Cho số tự nhiên N bất kỳ Tính tổng S=1+1/(1+2) + 1/(1+2+3) +…+\n" +
-"      1/(1+2+3+..+N)");
-        }
-        else if(str.equals("bai2")){
+        if (str.equals("bai1")) {
+            jLDeBai.setText("Bài 1: Cho số tự nhiên N bất kỳ Tính tổng S=1+1/(1+2) + 1/(1+2+3) +…+\n"
+                    + "      1/(1+2+3+..+N)");
+        } else if (str.equals("bai2")) {
             jLDeBai.setText("Bài 2: Cho số tự nhiên N bất kỳ, tính tổng S= 1+ 1/2! + 1/3! + … + 1/N!");
-        }
-        else if(str.equals("bai3")){
+        } else if (str.equals("bai3")) {
             jLDeBai.setText("Bài 3: Cho số tự nhiên N bất kỳ, tính tổng S=1+1/(1+2!) + 1/(1+2!+3!)+..+ 1/(1+2!+3!+..+N!)");
-        }
-        else if(str.equals("bai4")){
+        } else if (str.equals("bai4")) {
             jLDeBai.setText("Bài 4: Dãy Fibonaxi 1, 2, 3, … F(k) = F(k-1) + F(k-2). Tính số Fibonaxi thứ N.");
         }
       
         jLDeBai.setHorizontalAlignment((int) CENTER_ALIGNMENT);
     }
+
     public JButton getjButton1() {
         return jBBai1;
     }

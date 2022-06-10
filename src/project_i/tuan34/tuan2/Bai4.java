@@ -8,17 +8,8 @@
  */
 package project_i.tuan34.tuan2;
 
-import project_i.tuan34.tuan1.*;
-import java.awt.CardLayout;
 import java.awt.Color;
-import java.util.ArrayList;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
-import javax.swing.plaf.SliderUI;
-import org.netbeans.lib.awtextra.AbsoluteConstraints;
-import org.netbeans.lib.awtextra.AbsoluteLayout;
 import project_i.tuan29.Bai_1;
 
 /**
@@ -43,6 +34,7 @@ public class Bai4 extends javax.swing.JPanel {
         jLabel3.setText("số Fibonaxi thứ ");
         jLabel2.setBorder(new LineBorder(Color.BLACK));
          jButton1.setText("OK");
+        jLabel2.setText("");
     }
 
     public void handle() {

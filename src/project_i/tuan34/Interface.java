@@ -9,7 +9,8 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 import project_i.tuan34.tuan1.Tuan29;
 import project_i.tuan34.tuan2.Tuan30;
-import project_i.tuan34.tuan31.Tuan31;
+import project_i.tuan34.tuan3.Tuan31;
+import project_i.tuan34.tuan4.Tuan32;
 
 /**
  *
@@ -43,6 +44,7 @@ public class Interface extends javax.swing.JFrame {
         tuan2.setText("Tuần 30");
         tuan3.setText("Tuần 31");
         tuan4.setText("Tuần 32");
+        tuan5.setText("Tuần 33");
     }
 
     public void getExWeek() {
@@ -51,7 +53,9 @@ public class Interface extends javax.swing.JFrame {
 
         jPanel3.add(new Tuan29(), "tuan29");
         jPanel3.add(new Tuan30(), "tuan30");
-         jPanel3.add(new Tuan31(), "tuan31");
+        jPanel3.add(new Tuan31(), "tuan31");
+        jPanel3.add(new Tuan32(), "tuan32");
+        jPanel3.add(new Tuan31(), "tuan31");
         cardLayout.show(jPanel3, "tuan29");
 
     }
@@ -63,7 +67,7 @@ public class Interface extends javax.swing.JFrame {
         tuan2.addActionListener((e) -> {
             cardLayout.show(jPanel3, "tuan30");
         });
-         tuan3.addActionListener((e) -> {
+        tuan3.addActionListener((e) -> {
             cardLayout.show(jPanel3, "tuan31");
         });
     }

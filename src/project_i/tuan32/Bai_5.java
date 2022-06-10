@@ -10,12 +10,18 @@ public class Bai_5 {
     Scanner sc = new Scanner(System.in);
 
     public void run() {
-        bai_5();
+        bai_5(input());
     }
-
-    public void bai_5() {
+    public String input(){
+        
         System.out.println("nhap xau: ");
         String str = sc.nextLine();
+        return str;
+    }
+     
+        
+    public String bai_5(String str) {
+        
         char[] temp = str.toCharArray();
 
         for (int i = 0; i < temp.length; i++) {
@@ -31,5 +37,6 @@ public class Bai_5 {
             str += temp[i];
         }
         System.out.println("anwser: "+str);
+        return str;
     }
 }

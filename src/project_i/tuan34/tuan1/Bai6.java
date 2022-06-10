@@ -6,7 +6,6 @@
 package project_i.tuan34.tuan1;
 
 import java.awt.Color;
-import static java.awt.Component.CENTER_ALIGNMENT;
 import javax.swing.JLabel;
 import javax.swing.border.LineBorder;
 import org.netbeans.lib.awtextra.AbsoluteConstraints;
@@ -37,6 +36,8 @@ public class Bai6 extends javax.swing.JPanel {
         jLabel1.setText("N: ");
         jTextField1.setText("5");
         jButton1.setText("OK");
+        jPanel2.removeAll();
+        jPanel2.updateUI();
     }
 
     public void handle() {

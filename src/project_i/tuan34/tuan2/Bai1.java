@@ -33,6 +33,7 @@ public class Bai1 extends javax.swing.JPanel {
               jLabel3.setText("ket qua");
               jLabel4.setBorder(new LineBorder(Color.BLACK));
               jButton1.setText("OK");
+              jLabel4.setText("");
     }
 
     public void handle() {

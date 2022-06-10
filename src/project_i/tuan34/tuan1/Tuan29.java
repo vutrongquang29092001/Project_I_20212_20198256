@@ -23,86 +23,113 @@ public class Tuan29 extends javax.swing.JPanel {
      * Creates new form Tuan29
      */
     Bai1 bai1 = new Bai1();
+
+    Bai2 bai2 = new Bai2();
+
+    Bai3 bai3 = new Bai3();
+
+    Bai4 bai4 = new Bai4();
+
+    Bai5 bai5 = new Bai5();
+
+    Bai6 bai6 = new Bai6();
+
+    Bai7 bai7 = new Bai7();
     Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
 
     public Tuan29() {
         initComponents();
+        setUp();
         getEx();
+    }
+
+    public void setUp() {
+        jBBai1.setText("Bai1");
+        jBBai2.setText("Bai2");
+        jBBai3.setText("Bai3");
+        jBBai4.setText("Bai4");
+        jBBai5.setText("Bai5");
+        jBBai6.setText("Bai6");
+        jBBai7.setText("Bai7");
+
     }
 
     public void getEx() {
         jPanel3.setLayout(new CardLayout());
         CardLayout cardLayout = (CardLayout) jPanel3.getLayout();
-        jPanel3.add(new Bai1(), "bai1");
-        jPanel3.add(new Bai2(), "bai2");
-        jPanel3.add(new Bai3(), "bai3");
-        jPanel3.add(new Bai4(), "bai4");
-        jPanel3.add(new Bai5(), "bai5");
-        jPanel3.add(new Bai6(), "bai6");
-        jPanel3.add(new Bai7(), "bai7");
+        jPanel3.add(bai1, "bai1");
+        jPanel3.add(bai2, "bai2");
+        jPanel3.add(bai3, "bai3");
+        jPanel3.add(bai4, "bai4");
+        jPanel3.add(bai5, "bai5");
+        jPanel3.add(bai6, "bai6");
+        jPanel3.add(bai7, "bai7");
         setDeBai("bai1");
         jBBai1.addActionListener((e) -> {
+            bai1.setUp();
             cardLayout.show(jPanel3, "bai1");
             setDeBai("bai1");
             
         });
         jBBai2.addActionListener((e) -> {
+            bai2.setUp();
             cardLayout.show(jPanel3, "bai2");
              setDeBai("bai2");
         });
          jBBai3.addActionListener((e) -> {
+            bai3.setUp();
             cardLayout.show(jPanel3, "bai3");
              setDeBai("bai3");
         });
           jBBai4.addActionListener((e) -> {
+            bai4.setUp();
             cardLayout.show(jPanel3, "bai4");
               setDeBai("bai4");
         });
            jBBai5.addActionListener((e) -> {
+            bai5.setUp();
             cardLayout.show(jPanel3, "bai5");
              setDeBai("bai5");
         });
             jBBai6.addActionListener((e) -> {
+            bai6.setUp();
             cardLayout.show(jPanel3, "bai6");
              setDeBai("bai6");
         });
              jBBai7.addActionListener((e) -> {
+            bai7.setUp();
             cardLayout.show(jPanel3, "bai7");
             setDeBai("bai7");
         });
 
     }
-    public void setDeBai(String str){
+
+    public void setDeBai(String str) {
           jLDeBai.setBorder(border);
-        if(str.equals("bai1")){
-            jLDeBai.setText("Bài 01: In ra màn hình tất cả các hợp số <100\n" +
-                            "MSSV Họ ten-lop");
-        }
-        else if(str.equals("bai2")){
+        if (str.equals("bai1")) {
+            jLDeBai.setText("Bài 01: In ra màn hình tất cả các hợp số <100\n"
+                    + "MSSV Họ ten-lop");
+        } else if (str.equals("bai2")) {
             jLDeBai.setText("Bài 02: In ra màn hình 20 số nguyên tố đầu tiên");
-        }
-        else if(str.equals("bai3")){
+        } else if (str.equals("bai3")) {
             jLDeBai.setText("Bài 03: In ra màn hình tất cả các số nguyên tố từ 1000 đến 2000");
-        }
-        else if(str.equals("bai4")){
+        } else if (str.equals("bai4")) {
             jLDeBai.setText("Bài 04: In ra màn hình các số <100 và chia hết cho 3,7");
-        }
-        else if(str.equals("bai5")){
+        } else if (str.equals("bai5")) {
             jLDeBai.setText("Bài 05: In ra màn hình các số nằm giữa 1000 và 2000 đồng thời chia hết cho 3,5,7");
-        }
-        else if(str.equals("bai6")){
-            jLDeBai.setText("Bài 06: In ra màn hình 5 số hoàn hảo đầu tiên \n"+
-                    "(Số hoàn hảo là số có tổng bằng các ước số của mình kể cả 1");
-        }
-        else if(str.equals("bai7")){
-            jLDeBai.setText("Bài 07: Trong các số tự nhiên <=100 hãy đếm xem có bao nhiêu số. \n" +
-"a,	Chia hết cho. 5 \n" +
-"b,	Chia 5 dư 1. \n" +
-"c,	Chia 5 dư 2. \n" +
-"d,	Chia 5 dư 3.");
+        } else if (str.equals("bai6")) {
+            jLDeBai.setText("Bài 06: In ra màn hình 5 số hoàn hảo đầu tiên \n"
+                    + "(Số hoàn hảo là số có tổng bằng các ước số của mình kể cả 1");
+        } else if (str.equals("bai7")) {
+            jLDeBai.setText("Bài 07: Trong các số tự nhiên <=100 hãy đếm xem có bao nhiêu số. \n"
+                    + "a,	Chia hết cho. 5 \n"
+                    + "b,	Chia 5 dư 1. \n"
+                    + "c,	Chia 5 dư 2. \n"
+                    + "d,	Chia 5 dư 3.");
         }
               jLDeBai.setHorizontalAlignment((int) CENTER_ALIGNMENT);
     }
+
     public JButton getjButton1() {
         return jBBai1;
     }

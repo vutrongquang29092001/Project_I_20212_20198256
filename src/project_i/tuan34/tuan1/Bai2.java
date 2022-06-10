@@ -40,6 +40,8 @@ public class Bai2 extends javax.swing.JPanel {
         jTextField1.setText("20");
         jTextField1.setEditable(false);
         jButton1.setText("OK");
+        jPanel2.removeAll();
+        jPanel2.updateUI();
     }
 
     public void handle() {

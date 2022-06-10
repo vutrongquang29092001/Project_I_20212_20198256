@@ -36,10 +36,10 @@ public class Bai7 extends javax.swing.JPanel {
             jPanel7.updateUI();
         });
 
-        
     }
 
     public void setUp() {
+
         jLabel1.setText("Kết quả: ");
         jLabel6.setText("chia hết cho 5");
         jLabel3.setText("chia hết 5 dư 1");
@@ -51,6 +51,11 @@ public class Bai7 extends javax.swing.JPanel {
         temp[1] = jPanel3;
         temp[2] = jPanel4;
         temp[3] = jPanel5;
+
+        temp[0].removeAll();
+        temp[1].removeAll();
+        temp[2].removeAll();
+        temp[3].removeAll();
 
         temp[0].setLayout(new AbsoluteLayout());
         temp[1].setLayout(new AbsoluteLayout());
@@ -68,6 +73,10 @@ public class Bai7 extends javax.swing.JPanel {
         jPanel7.add(temp[2], new org.netbeans.lib.awtextra.AbsoluteConstraints(324, 0, 162, 350));
         jPanel7.add(temp[3], new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 0, 163, 350));
 
+        temp[0].updateUI();
+        temp[1].updateUI();
+        temp[2].updateUI();
+        temp[3].updateUI();
     }
 
     public void handle() {

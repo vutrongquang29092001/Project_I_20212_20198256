@@ -8,17 +8,8 @@
  */
 package project_i.tuan34.tuan2;
 
-import project_i.tuan34.tuan1.*;
-import java.awt.CardLayout;
 import java.awt.Color;
-import java.util.ArrayList;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
-import javax.swing.plaf.SliderUI;
-import org.netbeans.lib.awtextra.AbsoluteConstraints;
-import org.netbeans.lib.awtextra.AbsoluteLayout;
 import project_i.tuan29.Bai_1;
 
 /**
@@ -37,17 +28,20 @@ public class Bai3 extends javax.swing.JPanel {
         setUp(); 
         
     }
+
    public void setUp() {
               jLabel1.setText("N: ");
               jLabel3.setText("ket qua");
               jLabel2.setBorder(new LineBorder(Color.BLACK));
                jButton1.setText("OK");
+        jLabel2.setText("");
     }
 
     public void handle() {
-        double anwser  = new project_i.tuan30.Bai_2().bai_2(Integer.parseInt(jTextField1.getText()));
-        jLabel2.setText(""+anwser);
+        double anwser = new project_i.tuan30.Bai_2().bai_2(Integer.parseInt(jTextField1.getText()));
+        jLabel2.setText("" + anwser);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -113,6 +107,7 @@ public class Bai3 extends javax.swing.JPanel {
         handle();
       
       
+    //GEN-LAST:event_jButton1ActionPerformed
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -23,6 +23,7 @@ public class Bai3 extends javax.swing.JPanel {
      * Creates new form 
      */
     Bai_3 bai_3 = new Bai_3();
+
     public Bai3() {
         initComponents();
         setUp();
@@ -32,14 +33,16 @@ public class Bai3 extends javax.swing.JPanel {
         jPanel2.updateUI();
         });
         
-        
     }
-    public void setUp(){
+        
+    public void setUp() {
         jLabel1.setText("vị trí bắt đầu");
         jTextField1.setText("1000");
         jLabel2.setText("vị trí kết thúc");
         jTextField2.setText("2000");
         jButton1.setText("OK");
+        jPanel2.removeAll();
+        jPanel2.updateUI();
     }
     
     public void handle() {
@@ -64,7 +67,7 @@ public class Bai3 extends javax.swing.JPanel {
                 jL[i][j].setHorizontalAlignment((int) CENTER_ALIGNMENT);
                 jL[i][j].setBorder(new LineBorder(Color.yellow));
                 jPanel2.add(jL[i][j], new AbsoluteConstraints(X, Y, WIDTH, HEIGHT));
-                  X =  6 * (j + 1) + (j + 1) * WIDTH;
+                X = 6 * (j + 1) + (j + 1) * WIDTH;
                 if (count == size) {
                     break;
                 }
@@ -74,6 +77,7 @@ public class Bai3 extends javax.swing.JPanel {
             X = 0;
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

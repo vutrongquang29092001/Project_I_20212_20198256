@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project_i.tuan34.tuan31;
+package project_i.tuan34.tuan3;
 
-import project_i.tuan34.tuan1.*;
+
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Font;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -38,64 +39,58 @@ public class Tuan31 extends javax.swing.JPanel {
         jPanel3.add(new Bai2(), "bai2");
         jPanel3.add(new Bai3(), "bai3");
         jPanel3.add(new Bai4(), "bai4");
-        jPanel3.add(new Bai5(), "bai5");
+       jPanel3.add(new Bai5(), "bai5");
         jPanel3.add(new Bai6(), "bai6");
-      
+
         setDeBai("bai1");
         jBBai1.addActionListener((e) -> {
             cardLayout.show(jPanel3, "bai1");
             setDeBai("bai1");
-            
+
         });
         jBBai2.addActionListener((e) -> {
             cardLayout.show(jPanel3, "bai2");
-             setDeBai("bai2");
+            setDeBai("bai2");
         });
-         jBBai3.addActionListener((e) -> {
+        jBBai3.addActionListener((e) -> {
             cardLayout.show(jPanel3, "bai3");
-             setDeBai("bai3");
+            setDeBai("bai3");
         });
-          jBBai4.addActionListener((e) -> {
+        jBBai4.addActionListener((e) -> {
             cardLayout.show(jPanel3, "bai4");
-              setDeBai("bai4");
+            setDeBai("bai4");
         });
-           jBBai5.addActionListener((e) -> {
+        jBBai5.addActionListener((e) -> {
             cardLayout.show(jPanel3, "bai5");
-             setDeBai("bai5");
+            setDeBai("bai5");
         });
-            jBBai6.addActionListener((e) -> {
+        jBBai6.addActionListener((e) -> {
             cardLayout.show(jPanel3, "bai6");
-             setDeBai("bai6");
+            setDeBai("bai6");
         });
-       
 
     }
-    public void setDeBai(String str){
-          jLDeBai.setBorder(border);
-        if(str.equals("bai1")){
+
+    public void setDeBai(String str) {
+        jLDeBai.setBorder(border);
+        if (str.equals("bai1")) {
             jLDeBai.setText("Bài  01: Cho một dãy số tự nhiên, viết chương trình sắp xếp dãy này theo thứ tự giảm dần.");
-        }
-        else if(str.equals("bai2")){
+        } else if (str.equals("bai2")) {
             jLDeBai.setText("Bài 02: Cho dãy số tự nhiên, in ra màn hình tất cả các số nguyên tố của dãy này.");
-        }
-        else if(str.equals("bai3")){
+        } else if (str.equals("bai3")) {
             jLDeBai.setText("Bài 03: Cho một dãy các số tự nhiên, tìm và in ra 1 giá trị min của dãy này và tất cả các chỉ số ứng với giá trị min này.");
-        }
-        else if(str.equals("bai4")){
+        } else if (str.equals("bai4")) {
             jLDeBai.setText("Bài 04: Cho một dãy các số tự nhiên, tìm và in ra 1 giá trị max của dãy này và tất cả các chỉ số ứng với giá trị max này. ");
-        }
-        else if(str.equals("bai5")){
+        } else if (str.equals("bai5")) {
             jLDeBai.setText("Bài 05: Cho một dãy số tự nhiên, hãy đếm xem trong dãy số trên có bao nhiêu số nguyên tố, có bao nhiêu hợp số.");
-        }
-        else if(str.equals("bai6")){
+        } else if (str.equals("bai6")) {
             jLDeBai.setText("Bài 06: Cho một dãy số tự nhiên, hãy in ra tất cả các số hạng của dãy trên thỏa mãn: số này là ước số thực sự của 1 số hạng khác trong dãy trên.");
+            jLDeBai.setFont(new Font("Segoe UI", Font.PLAIN, 10));
         }
- 
 
-
-
-              jLDeBai.setHorizontalAlignment((int) CENTER_ALIGNMENT);
+        jLDeBai.setHorizontalAlignment((int) CENTER_ALIGNMENT);
     }
+
     public JButton getjButton1() {
         return jBBai1;
     }

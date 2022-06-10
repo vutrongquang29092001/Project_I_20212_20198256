@@ -7,8 +7,6 @@ package project_i.tuan34.tuan1;
 
 import java.awt.Color;
 import static java.awt.Component.CENTER_ALIGNMENT;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -28,7 +26,6 @@ public class Bai5 extends javax.swing.JPanel {
     /**
      * Creates new form 
      */
-   
     public Bai5() {
         initComponents();
         setUp();
@@ -39,7 +36,8 @@ public class Bai5 extends javax.swing.JPanel {
         });
         
     }
-    public void setUp(){
+
+    public void setUp() {
         jLabel1.setText("vị trí bắt đầu");
         jLabel2.setText("vị trí kết thúc");
         jTextField1.setText("1000");
@@ -47,10 +45,13 @@ public class Bai5 extends javax.swing.JPanel {
         jTextField1.setEditable(false);
         jTextField2.setEditable(false);
         jButton1.setText("OK");
+        jPanel3.removeAll();
+        jPanel3.updateUI();
         
     }
-    public void handle(){
-           Map<Integer,Integer> list = new HashMap<Integer, Integer>();
+
+    public void handle() {
+        Map<Integer, Integer> list = new HashMap<Integer, Integer>();
                  list = new Bai_5().bai_5();
         int size = list.size();
         System.out.println("size:" + size);
@@ -62,13 +63,13 @@ public class Bai5 extends javax.swing.JPanel {
         int count = 0;
         jPanel3.setLayout(new AbsoluteLayout());
         Set set = list.entrySet();
-        Iterator itr=set.iterator(); 
+        Iterator itr = set.iterator();
        
         for (int i = 0; i < colum; i++) {
 
             for (int j = 0; j < row; j++) {
                 itr.hasNext();
-                 Map.Entry entry=(Map.Entry)itr.next(); 
+                Map.Entry entry = (Map.Entry) itr.next();
                 jL3[j][i] = new JLabel();
 
                 jL3[j][i].setText("" + entry.getValue());
@@ -76,7 +77,7 @@ public class Bai5 extends javax.swing.JPanel {
                 jL3[j][i].setHorizontalAlignment((int) CENTER_ALIGNMENT);
                 jL3[j][i].setBorder(new LineBorder(Color.yellow));
                 jPanel3.add(jL3[j][i], new AbsoluteConstraints(X, Y, WIDTH, HEIGHT));
-                Y = 1+ (3 * (j + 1) + (j + 1) * HEIGHT);
+                Y = 1 + (3 * (j + 1) + (j + 1) * HEIGHT);
                 if (count == size) {
                     break;
                 }
@@ -85,6 +86,7 @@ public class Bai5 extends javax.swing.JPanel {
             Y = 0;
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -129,6 +131,8 @@ public class Bai5 extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(153, 0, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);

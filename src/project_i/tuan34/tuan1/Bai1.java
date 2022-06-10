@@ -5,14 +5,10 @@
  */
 package project_i.tuan34.tuan1;
 
-import java.awt.CardLayout;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.UIManager;
 import javax.swing.border.LineBorder;
-import javax.swing.plaf.SliderUI;
 import org.netbeans.lib.awtextra.AbsoluteConstraints;
 import org.netbeans.lib.awtextra.AbsoluteLayout;
 import project_i.tuan29.Bai_1;
@@ -30,9 +26,16 @@ public class Bai1 extends javax.swing.JPanel {
 
     public Bai1() {
         initComponents();
-        setUp(); 
-        
+        setUp();
+        jButton1.addActionListener((e) -> {
+            jPanel3.removeAll();
+            handle();
+            jPanel3.updateUI();
+
+        });
+
     }
+
     public void setUp() {
         jLabel1.setText("N: ");
         jTextField1.setText("");
@@ -43,47 +46,43 @@ public class Bai1 extends javax.swing.JPanel {
         jLabel2.setBorder(new LineBorder(Color.BLACK));
         jTextField1.setText("20");
         jTextField1.setEditable(false);
-        
+        jPanel3.removeAll();
+        jPanel3.updateUI();
     }
 
     public void handle() {
-//        JPanel jPanel4 = new JPanel();
-//        jPanel4.setVisible(true);
-//        jPanel4.setSize(650,300);
-//         jPanel4.setBackground(new java.awt.Color(204, 51, 255));
-//        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-          
+
         ArrayList<Integer> list = bai_1.bai_1();
         int size = list.size();
-        System.out.println("size:"+ size);
+        System.out.println("size:" + size);
         int row = 8;
         int colum = 10;
         int X = 0, Y = 0;
         int WIDTH = 60, HEIGHT = 25;
         JLabel jL[][] = new JLabel[row][colum];
-         int count = 0;
-          jPanel3.setLayout(new AbsoluteLayout());
+        int count = 0;
+        jPanel3.setLayout(new AbsoluteLayout());
         for (int i = 0; i < row; i++) {
-             
+
             for (int j = 0; j < colum; j++) {
-                jL[i][j] = new JLabel();              
-                
-                jL[i][j].setText(list.get(count)+"");
-                 count++;
+                jL[i][j] = new JLabel();
+
+                jL[i][j].setText(list.get(count) + "");
+                count++;
                 jL[i][j].setHorizontalAlignment((int) CENTER_ALIGNMENT);
-                jL[i][j].setBorder(new LineBorder(Color.yellow));
+                jL[i][j].setBorder(new LineBorder(Color.BLACK));
                 jPanel3.add(jL[i][j], new AbsoluteConstraints(X, Y, WIDTH, HEIGHT));
-             
-                   X =  3* (j+1) + (j+1)*WIDTH;
-                 if(count == size) {
-                     break;
-                 }
+
+                X = 3 * (j + 1) + (j + 1) * WIDTH;
+                if (count == size) {
+                    break;
+                }
             }
-          
-             Y =  (12* (i+1) + (i+1)*HEIGHT);
-             X = 0;
-        } 
-     
+
+            Y = (12 * (i + 1) + (i + 1) * HEIGHT);
+            X = 0;
+        }
+
     }
 
     /**
@@ -133,7 +132,7 @@ public class Bai1 extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 350));
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 153, 153));
@@ -141,7 +140,7 @@ public class Bai1 extends javax.swing.JPanel {
         jLabel2.setText("jLabel2");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 50));
 
-        jPanel3.setBackground(new java.awt.Color(204, 51, 255));
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 650, 300));
 
@@ -153,11 +152,7 @@ public class Bai1 extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jPanel3.removeAll();
-        handle();
-        jPanel3.updateUI();
-      
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
