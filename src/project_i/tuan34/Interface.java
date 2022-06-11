@@ -6,7 +6,9 @@
 package project_i.tuan34;
 
 import java.awt.CardLayout;
+import java.awt.Color;
 import javax.swing.JPanel;
+import project_i.tuan33.GUI;
 import project_i.tuan34.tuan1.Tuan29;
 import project_i.tuan34.tuan2.Tuan30;
 import project_i.tuan34.tuan3.Tuan31;
@@ -29,6 +31,7 @@ public class Interface extends javax.swing.JFrame {
         setUp();
         getExWeek();
         Action();
+
     }
 
     public void setjPanel3(JPanel jPanel3) {
@@ -40,11 +43,50 @@ public class Interface extends javax.swing.JFrame {
     }
 
     public void setUp() {
+        setTitle("Tổng hợp bài tập tuần --- Vũ Trọng Quảng --- 20198256");
         tuan1.setText("Tuần 29");
         tuan2.setText("Tuần 30");
         tuan3.setText("Tuần 31");
         tuan4.setText("Tuần 32");
         tuan5.setText("Tuần 33");
+
+    }
+
+    public void changeColor(String str) {
+        Color color = new Color(255, 153, 153);
+        Color c = new Color(76, 80, 82);
+        if (str.equals("tuan29")) {
+            tuan1.setBackground(color);
+            tuan2.setBackground(c);
+            tuan3.setBackground(c);
+            tuan4.setBackground(c);
+            tuan5.setBackground(c);
+        } else if (str.equals("tuan30")) {
+            tuan2.setBackground(color);
+            tuan1.setBackground(c);
+            tuan3.setBackground(c);
+            tuan4.setBackground(c);
+            tuan5.setBackground(c);
+        } else if (str.equals("tuan31")) {
+            tuan3.setBackground(color);
+            tuan1.setBackground(c);
+            tuan2.setBackground(c);
+            tuan4.setBackground(c);
+            tuan5.setBackground(c);
+        } else if (str.equals("tuan32")) {
+            tuan4.setBackground(color);
+            tuan1.setBackground(c);
+            tuan2.setBackground(c);
+            tuan3.setBackground(c);
+            tuan5.setBackground(c);
+        } else if (str.equals("tuan33")) {
+            tuan5.setBackground(color);
+            tuan1.setBackground(c);
+            tuan2.setBackground(c);
+            tuan3.setBackground(c);
+            tuan4.setBackground(c);
+        }
+        jPanel1.updateUI();
     }
 
     public void getExWeek() {
@@ -55,21 +97,37 @@ public class Interface extends javax.swing.JFrame {
         jPanel3.add(new Tuan30(), "tuan30");
         jPanel3.add(new Tuan31(), "tuan31");
         jPanel3.add(new Tuan32(), "tuan32");
-        jPanel3.add(new Tuan31(), "tuan31");
         cardLayout.show(jPanel3, "tuan29");
 
     }
 
     public void Action() {
         tuan1.addActionListener((e) -> {
+            setTitle("Tổng hợp bài tập tuần --- Vũ Trọng Quảng --- 20198256 --- tuan 29");
+            changeColor("tuan29");
             cardLayout.show(jPanel3, "tuan29");
+
         });
         tuan2.addActionListener((e) -> {
+            setTitle("Tổng hợp bài tập tuần --- Vũ Trọng Quảng --- 20198256 --- tuan 30");
+            changeColor("tuan30");
             cardLayout.show(jPanel3, "tuan30");
         });
         tuan3.addActionListener((e) -> {
+            setTitle("Tổng hợp bài tập tuần --- Vũ Trọng Quảng --- 20198256 --- tuan 31");
+            changeColor("tuan31");
             cardLayout.show(jPanel3, "tuan31");
         });
+        tuan4.addActionListener((e) -> {
+            setTitle("Tổng hợp bài tập tuần --- Vũ Trọng Quảng --- 20198256 --- tuan 32");
+            changeColor("tuan32");
+            cardLayout.show(jPanel3, "tuan32");
+        });
+        tuan5.addActionListener((e) -> {
+            changeColor("tuan33");
+            new GUI().setVisible(true);
+        });
+
     }
 
     /**

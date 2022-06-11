@@ -87,6 +87,7 @@ public class Bai7 extends javax.swing.JPanel {
         System.out.println("size1:" + list.get(1).size());
         System.out.println("size2:" + list.get(2).size());
         System.out.println("size3:" + list.get(3).size());
+       
         int row = 11;
         int colum = 2;
         int X = 0, Y = 26;
@@ -114,7 +115,7 @@ public class Bai7 extends javax.swing.JPanel {
                     jL3[t][j][i].setText("" + list.get(t).get(count));
                     count++;
                     jL3[t][j][i].setHorizontalAlignment((int) LEFT_ALIGNMENT);
-                    jL3[t][j][i].setBorder(new LineBorder(Color.yellow));
+                    jL3[t][j][i].setBorder(new LineBorder(Color.BLACK));
                     temp[t].add(jL3[t][j][i], new AbsoluteConstraints(X, Y, WIDTH, HEIGHT));
                     Y = 26 + (5 * (j + 1) + (j + 1) * HEIGHT);
                     if (count == list.get(t).size()) {
@@ -154,7 +155,7 @@ public class Bai7 extends javax.swing.JPanel {
         setBackground(new java.awt.Color(204, 255, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("jButton1");
@@ -202,13 +203,11 @@ public class Bai7 extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;

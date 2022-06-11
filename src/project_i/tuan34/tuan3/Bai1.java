@@ -25,23 +25,28 @@ import project_i.tuan31.Bai_1;
 public class Bai1 extends javax.swing.JPanel {
 
     ArrayList<Integer> list = new ArrayList<>();
+    boolean check = false;
 
     public Bai1() {
         initComponents();
         setUp();
-        listener();
-        jTextField1.addKeyListener(listener());
-        jButton1.addActionListener((e) -> {
-            handle(list);
 
+        jTextField1.addKeyListener(listener());
+
+        jButton1.addActionListener((e) -> {
+            jPanel6.removeAll();
+            jPanel5.removeAll();
+            handle(list);
+            check = true;
         });
     }
 
     public KeyListener listener() {
 
         KeyListener listener = new KeyListener() {
-            int i = 0;
+
             String s = "";
+            int i = 0;
 
             @Override
             public void keyTyped(KeyEvent e) {
@@ -50,7 +55,15 @@ public class Bai1 extends javax.swing.JPanel {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                handle(e);
+                if (check) {
+                    i = 0;
+                }
+                try {
+                      handle(e);
+                } catch (Exception e) {
+                    System.out.println("co loi");
+                }
+              
             }
 
             @Override
@@ -82,6 +95,7 @@ public class Bai1 extends javax.swing.JPanel {
                     i++;
                     jPanel5.updateUI();
                     s = "";
+                    check = false;
                 }
 
             }
@@ -118,7 +132,10 @@ public class Bai1 extends javax.swing.JPanel {
 
         jPanel6.removeAll();
         jPanel5.removeAll();
-        
+
+        jPanel6.updateUI();
+        jPanel5.updateUI();
+
     }
 
     public void handle(ArrayList<Integer> arr) {
@@ -144,7 +161,7 @@ public class Bai1 extends javax.swing.JPanel {
             jPanel6.add(temp, new AbsoluteConstraints(X, 275 - Hight, 25, Hight));
             jPanel6.updateUI();
         }
-
+        list.clear();
     }
 
     /**

@@ -59,7 +59,7 @@ public class Bai6 extends javax.swing.JPanel {
                 jL3[j][i].setText("" + arr[count]);
                 count++;
                 jL3[j][i].setHorizontalAlignment((int) LEFT_ALIGNMENT);
-                jL3[j][i].setBorder(new LineBorder(Color.yellow));
+                jL3[j][i].setBorder(new LineBorder(Color.black));
                 jPanel2.add(jL3[j][i], new AbsoluteConstraints(X, Y, WIDTH, HEIGHT));
                 Y = 50 + (5 * (j + 1) + (j + 1) * HEIGHT);
                 if (count == size) {
@@ -90,7 +90,7 @@ public class Bai6 extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 102, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("jButton1");
@@ -113,7 +113,7 @@ public class Bai6 extends javax.swing.JPanel {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 350, Short.MAX_VALUE)
         );
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 650, 350));

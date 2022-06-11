@@ -26,15 +26,18 @@ public class Bai4 extends javax.swing.JPanel {
     public Bai4() {
         initComponents();
         setUp();
-
+        jButton1.addActionListener((e) -> {
+            handle();
+        });
     }
 
     public void setUp() {
         jLabel1.setText("N: ");
         jLabel3.setText("số Fibonaxi thứ ");
         jLabel2.setBorder(new LineBorder(Color.BLACK));
-         jButton1.setText("OK");
+        jButton1.setText("OK");
         jLabel2.setText("");
+        jTextField1.setText("");
     }
 
     public void handle() {
@@ -88,7 +91,7 @@ public class Bai4 extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 350));
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 153, 153));

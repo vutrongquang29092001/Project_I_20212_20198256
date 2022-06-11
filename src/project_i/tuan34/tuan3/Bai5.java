@@ -63,7 +63,7 @@ public class Bai5 extends javax.swing.JPanel {
 
         ArrayList<ArrayList<Integer>> l = new Bai_5().bai_5(list);
         jTextField2.setText(l.get(0).size() + "");
-        jTextField3.setText(l.get(0).size() + "");
+        jTextField3.setText(l.get(1).size() + "");
         jPanel5.setLayout(new AbsoluteLayout());
         jPanel6.setLayout(new AbsoluteLayout());
         for (int i = 0; i < l.get(0).size(); i++) {

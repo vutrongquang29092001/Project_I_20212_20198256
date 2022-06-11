@@ -26,7 +26,7 @@ public class Bai_2 {
     }
 
     public int[] bai_2(int[] arr) {
-
+        
         int[] temp = new int[arr.length];
         int index = 0;
         for (int i = 0; i < arr.length; i++) {

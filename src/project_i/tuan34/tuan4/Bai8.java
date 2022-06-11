@@ -17,7 +17,7 @@ import project_i.tuan32.Bai_8;
  */
 public class Bai8 extends javax.swing.JPanel {
 
-    public Bai8() {
+     public Bai8() {
         initComponents();
         setUp();
 

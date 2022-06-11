@@ -5,7 +5,6 @@
  */
 package project_i.tuan34.tuan3;
 
-
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -25,6 +24,16 @@ public class Tuan31 extends javax.swing.JPanel {
      * Creates new form Tuan29
      */
     Bai1 bai1 = new Bai1();
+
+    Bai2 bai2 = new Bai2();
+
+    Bai3 bai3 = new Bai3();
+
+    Bai4 bai4 = new Bai4();
+
+    Bai5 bai5 = new Bai5();
+
+    Bai6 bai6 = new Bai6();
     Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
 
     public Tuan31() {
@@ -33,38 +42,53 @@ public class Tuan31 extends javax.swing.JPanel {
     }
 
     public void getEx() {
+        jBBai1.setText("Bai1");
+        jBBai2.setText("Bai2");
+        jBBai3.setText("Bai3");
+        jBBai4.setText("Bai4");
+        jBBai5.setText("Bai5");
+        jBBai6.setText("Bai6");
+      
+
         jPanel3.setLayout(new CardLayout());
         CardLayout cardLayout = (CardLayout) jPanel3.getLayout();
-        jPanel3.add(new Bai1(), "bai1");
-        jPanel3.add(new Bai2(), "bai2");
-        jPanel3.add(new Bai3(), "bai3");
-        jPanel3.add(new Bai4(), "bai4");
-       jPanel3.add(new Bai5(), "bai5");
-        jPanel3.add(new Bai6(), "bai6");
+
+        jPanel3.add(bai1, "bai1");
+        jPanel3.add(bai2, "bai2");
+        jPanel3.add(bai3, "bai3");
+        jPanel3.add(bai4, "bai4");
+        jPanel3.add(bai5, "bai5");
+        jPanel3.add(bai6, "bai6");
 
         setDeBai("bai1");
         jBBai1.addActionListener((e) -> {
+            bai1.setUp();
             cardLayout.show(jPanel3, "bai1");
             setDeBai("bai1");
 
         });
         jBBai2.addActionListener((e) -> {
+            bai2.setUp();
             cardLayout.show(jPanel3, "bai2");
             setDeBai("bai2");
         });
         jBBai3.addActionListener((e) -> {
+            bai3.setUp();
             cardLayout.show(jPanel3, "bai3");
             setDeBai("bai3");
         });
         jBBai4.addActionListener((e) -> {
+            bai4.setUp();
             cardLayout.show(jPanel3, "bai4");
             setDeBai("bai4");
         });
         jBBai5.addActionListener((e) -> {
+            bai5.setUp();
             cardLayout.show(jPanel3, "bai5");
             setDeBai("bai5");
         });
         jBBai6.addActionListener((e) -> {
+            bai6.setUp();
             cardLayout.show(jPanel3, "bai6");
             setDeBai("bai6");
         });

@@ -37,40 +37,45 @@ public class Tuan30 extends javax.swing.JPanel {
     }
 
     public void getEx() {
+        jBBai1.setText("Bai1");
+        jBBai2.setText("Bai2");
+        jBBai3.setText("Bai3");
+        jBBai4.setText("Bai4");
+      
         jPanel3.setLayout(new CardLayout());
         CardLayout cardLayout = (CardLayout) jPanel3.getLayout();
         jPanel3.add(bai1, "bai1");
         jPanel3.add(bai2, "bai2");
         jPanel3.add(bai3, "bai3");
         jPanel3.add(bai4, "bai4");
-      
+
         setDeBai("bai1");
         jBBai1.addActionListener((e) -> {
             bai1.setUp();
             cardLayout.show(jPanel3, "bai1");
             setDeBai("bai1");
-            
+
         });
         jBBai2.addActionListener((e) -> {
             bai2.setUp();
             cardLayout.show(jPanel3, "bai2");
-             setDeBai("bai2");
+            setDeBai("bai2");
         });
-         jBBai3.addActionListener((e) -> {
+        jBBai3.addActionListener((e) -> {
             bai3.setUp();
             cardLayout.show(jPanel3, "bai3");
-             setDeBai("bai3");
+            setDeBai("bai3");
         });
-          jBBai4.addActionListener((e) -> {
+        jBBai4.addActionListener((e) -> {
             bai4.setUp();
             cardLayout.show(jPanel3, "bai4");
-              setDeBai("bai4");
+            setDeBai("bai4");
         });
-        
+
     }
 
     public void setDeBai(String str) {
-          jLDeBai.setBorder(border);
+        jLDeBai.setBorder(border);
         if (str.equals("bai1")) {
             jLDeBai.setText("Bài 1: Cho số tự nhiên N bất kỳ Tính tổng S=1+1/(1+2) + 1/(1+2+3) +…+\n"
                     + "      1/(1+2+3+..+N)");
@@ -81,7 +86,7 @@ public class Tuan30 extends javax.swing.JPanel {
         } else if (str.equals("bai4")) {
             jLDeBai.setText("Bài 4: Dãy Fibonaxi 1, 2, 3, … F(k) = F(k-1) + F(k-2). Tính số Fibonaxi thứ N.");
         }
-      
+
         jLDeBai.setHorizontalAlignment((int) CENTER_ALIGNMENT);
     }
 

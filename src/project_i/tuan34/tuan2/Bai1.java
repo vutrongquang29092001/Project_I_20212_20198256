@@ -34,6 +34,7 @@ public class Bai1 extends javax.swing.JPanel {
               jLabel4.setBorder(new LineBorder(Color.BLACK));
               jButton1.setText("OK");
               jLabel4.setText("");
+              jTextField1.setText("");
     }
 
     public void handle() {
@@ -86,7 +87,7 @@ public class Bai1 extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 350));
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setText("jLabel4");

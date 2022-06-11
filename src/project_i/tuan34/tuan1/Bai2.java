@@ -63,7 +63,7 @@ public class Bai2 extends javax.swing.JPanel {
                 jL[i][j].setText("" + list[count]);
                 count++;
                 jL[i][j].setHorizontalAlignment((int) CENTER_ALIGNMENT);
-                jL[i][j].setBorder(new LineBorder(Color.yellow));
+                jL[i][j].setBorder(new LineBorder(Color.black));
                 jPanel2.add(jL[i][j], new AbsoluteConstraints(X, Y, WIDTH, HEIGHT));
               
                   X = 20 + 20 * (j + 1) + (j + 1) * WIDTH;
@@ -92,7 +92,7 @@ public class Bai2 extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(255, 255, 204));
+        setBackground(new java.awt.Color(153, 153, 153));
         setMinimumSize(new java.awt.Dimension(750, 350));
         setPreferredSize(new java.awt.Dimension(750, 350));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,7 +105,7 @@ public class Bai2 extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

@@ -143,7 +143,7 @@ public class GUI extends JFrame {
         jScrollPane1 = new JScrollPane();
         jtbl = new JTable();
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
         setTitle("QUẢN LÝ TÀI LIỆU --- Vũ Trọng Quảng --- 20198256");
 
         jlbInfo.setFont(new java.awt.Font("Source Sans Pro", 1, 18)); // NOI18N

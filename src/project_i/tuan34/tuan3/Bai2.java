@@ -22,10 +22,8 @@ public class Bai2 extends javax.swing.JPanel {
     public Bai2() {
         initComponents();
         setUp();
-
         jButton1.addActionListener((e) -> {
             handleInput();
-
         });
     }
 
@@ -58,18 +56,21 @@ public class Bai2 extends javax.swing.JPanel {
 
     public void handleInput() {
         String str = jTextField1.getText();
-        System.out.println(str);
+        
         String s[] = str.split(" ");
         int[] arr = new int[20];
         for (int i = 0; i < s.length ; i++){
-            if(s[i].equals(" ")){
+            if(s[i].equals("")){
                 continue;
             }
             arr[i] = Integer.parseInt(s[i]);
+          
         }
+        
         arr = new Bai_2().bai_2(arr);
+        
         str = "";
-        for(int i = 0; i < s.length ; i++){
+        for(int i = 0; i < arr.length ; i++){
             if(arr[i] == 0) break;
             str += arr[i]+" ";
         }

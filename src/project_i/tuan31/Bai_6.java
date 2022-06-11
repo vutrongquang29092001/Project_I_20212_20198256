@@ -13,30 +13,18 @@ public class Bai_6 {
     Scanner sc = new Scanner(System.in);
 
     public void run() {
-        bai_6(input());
+        bai_6();
     }
 
-    public ArrayList<Integer> input() {
-        ArrayList<Integer> arr = new ArrayList<>();
+    public void bai_6() {
         System.out.print("nhap do dai mang: ");
         int n = sc.nextInt();
         System.out.println();
-
-        for (int i = 0; i < n; i++) {
-            System.out.print("phan tu thu " + i + ": ");
-            arr.set(i, sc.nextInt());
-            System.out.println();
-        }
-        return arr;
-    }
-
-    public ArrayList<ArrayList<Integer>> bai_6(ArrayList<Integer> aa) {
-        ArrayList<ArrayList<Integer>> l = new ArrayList<>();
-
-        int n = aa.size();
         int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = aa.get(i);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("phan tu thu " + i + ": ");
+            arr[i] = sc.nextInt();
+            System.out.println();
         }
         arr = bubbleSort(arr);
 
@@ -46,25 +34,23 @@ public class Bai_6 {
         int[][] a = new int[column][row];
         int index = 1;
         for (int i = 0; i < arr.length; i++) {
-            ArrayList<Integer> t = new ArrayList<>();
             // tim uoc cua arr[i]
+            int[] temp = FindU(arr[i]);
 
             a[i][0] = arr[i];
-            t.add(arr[i]);
-            for (int j = i+1; j < n; j++) {
-                int[] temp = FindU(arr[i]);
-                for (int z = 0; z < n; z++) {
 
-                    if (arr[i] == temp[z]) {
-                        a[i][index] = arr[j];
+            for (int j = 0; j < temp.length; j++) {
+
+                for (int z = 0; z < i; z++) {
+
+                    if (arr[z] == temp[j]) {
+                        a[i][index] = arr[z];
                         index++;
-                        t.add(arr[j]);
                     }
 
                 }
 
             }
-            l.add(t);
             index = 1;
         }
         for (int i = 0; i < column; i++) {
@@ -84,7 +70,6 @@ public class Bai_6 {
             count = -1;
             System.out.println();
         }
-        return l;
     }
 
     public int[] FindU(int a) {
@@ -114,5 +99,46 @@ public class Bai_6 {
             }
         }
         return arr;
+    }
+
+    public ArrayList<ArrayList<Integer>> bai_6(ArrayList<Integer> list) {
+        ArrayList<ArrayList<Integer>> l = new ArrayList<ArrayList<Integer>>();
+        int n = list.size();
+        int[] arr = new int[n];
+        for (int i = 0; i < arr.length; i++) {
+
+            arr[i] = list.get(i);
+
+        }
+        arr = bubbleSort(arr);
+
+        System.out.println();
+        int column = n;
+        int row = arr[n - 1];
+        int[][] a = new int[column][row];
+        int index = 1;
+        for (int i = 0; i < arr.length; i++) {
+
+            ArrayList<Integer> t = new ArrayList<>();
+            a[i][0] = arr[i];
+            t.add(arr[i]);
+            for (int j = i+1; j < n; j++) {
+                // tim uoc cua arr[i]
+                int[] temp = FindU(arr[j]);
+                for (int z = 0; z < temp.length; z++) {
+
+                    if (arr[i] == temp[z]) {
+                        a[i][index] = arr[j];
+                        t.add(arr[j]);
+                        index++;
+                    }
+
+                }
+
+            }
+            l.add(t);
+            index = 1;
+        }
+        return l;
     }
 }

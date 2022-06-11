@@ -31,22 +31,24 @@ public class Bai4 extends javax.swing.JPanel {
             jPanel5.removeAll();
             jPanel6.removeAll();
             handle();
-            jPanel5.updateUI();
-            jPanel6.updateUI();
-            jPanel5.updateUI();
-            jPanel6.updateUI();
+
         });
-     
+
     }
+  
 
     public void setUp() {
+
+        jPanel5.removeAll();
+        jPanel6.removeAll();
+        jPanel5.updateUI();
+        jPanel6.updateUI();
+        
         jButton1.setText("OK");
         jLabel1.setText("số chia hết cho 3");
         jLabel1.setHorizontalAlignment((int) CENTER_ALIGNMENT);
         jLabel2.setText("số chia hết cho 7");
         jLabel2.setHorizontalAlignment((int) CENTER_ALIGNMENT);
-        jPanel5.removeAll();
-        jPanel6.removeAll();
 
     }
 
@@ -71,8 +73,9 @@ public class Bai4 extends javax.swing.JPanel {
                 jL3[j][i].setText("" + list.get(0).get(count));
                 count++;
                 jL3[j][i].setHorizontalAlignment((int) CENTER_ALIGNMENT);
-                jL3[j][i].setBorder(new LineBorder(Color.yellow));
+                jL3[j][i].setBorder(new LineBorder(Color.black));
                 jPanel5.add(jL3[j][i], new AbsoluteConstraints(X, Y, WIDTH, HEIGHT));
+                jPanel5.updateUI();
                 Y = (3 * (j + 1) + (j + 1) * HEIGHT);
                 if (count == size3) {
                     break;
@@ -98,8 +101,9 @@ public class Bai4 extends javax.swing.JPanel {
                 jL7[j][i].setText("" + list.get(0).get(count));
                 count++;
                 jL7[j][i].setHorizontalAlignment((int) CENTER_ALIGNMENT);
-                jL7[j][i].setBorder(new LineBorder(Color.yellow));
+                jL7[j][i].setBorder(new LineBorder(Color.black));
                 jPanel6.add(jL7[j][i], new AbsoluteConstraints(X, Y, WIDTH, HEIGHT));
+                jPanel6.updateUI();
                 Y = (3 * (j + 1) + (j + 1) * HEIGHT);
                 if (count == size3) {
                     break;
@@ -134,7 +138,7 @@ public class Bai4 extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(750, 350));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setPreferredSize(new java.awt.Dimension(100, 350));
 
         jButton1.setText("jButton1");
@@ -178,7 +182,7 @@ public class Bai4 extends javax.swing.JPanel {
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, -1));
 
-        jPanel4.setBackground(new java.awt.Color(204, 255, 102));
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("jLabel2");

@@ -24,9 +24,8 @@ public class Bai6 extends javax.swing.JPanel {
         setUp();
 
         jButton1.addActionListener((e) -> {
-            jPanel5.removeAll();
-            jPanel6.removeAll();
-            handleJTextFiedlSetText();
+             
+          handleJTextFiedlSetText();
 
         });
     }
@@ -36,41 +35,48 @@ public class Bai6 extends javax.swing.JPanel {
         jLabel5.setText("Kết quả: ");
         jLabel1.setText("Phần tử là USTC");
         jLabel3.setText("của phần tử ");
+        jButton1.setText("OK");
+        jTextField1.setText("");
+        
         jLabel2.setBorder(new LineBorder(Color.BLACK));
         jLabel5.setBorder(new LineBorder(Color.BLACK));
         jLabel1.setBorder(new LineBorder(Color.BLACK));
         jLabel3.setBorder(new LineBorder(Color.BLACK));
-        jButton1.setText("OK");
-        jTextField1.setText("");
+
         jPanel5.removeAll();
         jPanel6.removeAll();
+        
+        jPanel5.updateUI();
+        jPanel6.updateUI();
     }
 
     public ArrayList<Integer> handleJTextFiedlGetText() {
         ArrayList<Integer> list = new ArrayList<>();
+
         String[] s = jTextField1.getText().split(" ");
+
         for (int i = 0; i < s.length; i++) {
             if (s[i].equals("") == true) {
                 continue;
             } else {
-
                 list.add(Integer.parseInt(s[i]));
             }
-
         }
         return list;
     }
 
     public void handleJTextFiedlSetText() {
-        String str = "";
 
         ArrayList<ArrayList<Integer>> l = new Bai_6().bai_6(handleJTextFiedlGetText());
 
         jPanel5.setLayout(new AbsoluteLayout());
         jPanel6.setLayout(new AbsoluteLayout());
+
         int e = 0;
+
         for (int z = 0; z < l.size(); z++) {
             JLabel temp = new JLabel();
+
             int W = 115;
             int H = 25;
             int X = 10;
@@ -82,8 +88,10 @@ public class Bai6 extends javax.swing.JPanel {
 
             } else {
                 Y = 5 * (z - e) + 25 * (z - e);
+
                 temp.setText(l.get(z) + "");
                 temp.setBorder(new LineBorder(Color.WHITE));
+
                 jPanel6.add(temp, new AbsoluteConstraints(X, Y, W, H));
                 jPanel6.updateUI();
             }
@@ -91,11 +99,9 @@ public class Bai6 extends javax.swing.JPanel {
             JLabel t = new JLabel();
             W = 50;
             H = 25;
-
             Y = 5 * (z - e) + 25 * (z - e);
 
             t.setText(l.get(z).get(0) + "");
-
             t.setBorder(new LineBorder(Color.WHITE));
 
             jPanel5.add(t, new AbsoluteConstraints(X, Y, W, H));

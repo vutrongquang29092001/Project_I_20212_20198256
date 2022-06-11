@@ -75,7 +75,7 @@ public class Bai5 extends javax.swing.JPanel {
                 jL3[j][i].setText("" + entry.getValue());
                 count++;
                 jL3[j][i].setHorizontalAlignment((int) CENTER_ALIGNMENT);
-                jL3[j][i].setBorder(new LineBorder(Color.yellow));
+                jL3[j][i].setBorder(new LineBorder(Color.black));
                 jPanel3.add(jL3[j][i], new AbsoluteConstraints(X, Y, WIDTH, HEIGHT));
                 Y = 1 + (3 * (j + 1) + (j + 1) * HEIGHT);
                 if (count == size) {
@@ -108,7 +108,7 @@ public class Bai5 extends javax.swing.JPanel {
         setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("jButton1");
@@ -129,7 +129,7 @@ public class Bai5 extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 350));
 
-        jPanel2.setBackground(new java.awt.Color(153, 0, 153));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));

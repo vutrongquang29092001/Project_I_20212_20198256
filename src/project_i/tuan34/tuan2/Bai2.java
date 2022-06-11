@@ -23,16 +23,20 @@ public class Bai2 extends javax.swing.JPanel {
 
     public Bai2() {
         initComponents();
-        setUp(); 
+        setUp();
+        jTextField1.addActionListener((e) -> {
+        handle();
+        });
         
     }
 
     public void setUp() {
-              jLabel1.setText("N: ");
-              jLabel3.setText("ket qua");
-              jLabel2.setBorder(new LineBorder(Color.BLACK));
-               jButton1.setText("OK");
+        jLabel1.setText("N: ");
+        jLabel3.setText("ket qua");
+        jLabel2.setBorder(new LineBorder(Color.BLACK));
+        jButton1.setText("OK");
         jLabel2.setText("");
+        jTextField1.setText("");
     }
 
     public void handle() {
@@ -85,7 +89,7 @@ public class Bai2 extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 350));
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 153, 153));
@@ -101,11 +105,10 @@ public class Bai2 extends javax.swing.JPanel {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-              handle();
-      
-      
-    }//GEN-LAST:event_jButton1ActionPerformed
-        
+       
+
+        //GEN-LAST:event_jButton1ActionPerformed
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
